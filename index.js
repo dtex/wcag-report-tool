@@ -8,10 +8,20 @@ const auth = new google.auth.GoogleAuth({
 });
 
 const wcag = fs.readJSONSync('./wcag.json');
-const client = "BrandExtract";
+const client = "AIP";
 const version = "2.2";
-const level = "AAA";
-const pages = [siteLink("https://www.brandextract.com", "Home"), siteLink("https://www.brandextract.com/About/", "About"), siteLink("https://www.brandextract.com/Insights/", "Insights"), siteLink("https://www.brandextract.com/Contact/", "Contact"), siteLink("https://www.brandextract.com/About/Jobs/", "Jobs")];
+const level = "AA";
+    
+const pages = [
+    siteLink("https://we-are-accelerate.com/", "home"),
+    siteLink("https://we-are-accelerate.com/who-we-serve/", "Who We Serve"),
+    siteLink("https://we-are-accelerate.com/who-we-serve/business/", "Business"),
+    siteLink("https://we-are-accelerate.com/about/", "About"),
+    siteLink("https://we-are-accelerate.com/about/team/", "Team"),
+    siteLink("https://we-are-accelerate.com/news-insights/", "News & Insights"),
+    siteLink("https://we-are-accelerate.com/contact/", "Contact"),
+    siteLink("https://we-are-accelerate.com/request-an-offer/", "Request an Offer")
+];
 
 
 const sheets = google.sheets({version: 'v4', auth});
